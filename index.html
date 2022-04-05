@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <!--Head-->
+    <head>
+        <!--Created by: Mirwais Sarwary, Affiliation: The Tech Academy, Date: 4/2/2022 -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width" />
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+        <link rel="stylesheet" type="text/css" href="./CSS/portfolio_style.css">
+       
+        <title>Mirwais Sarwary</title>
+    
+    </head>
+    <!--End Head-->
+
+    <!--Body-->
+    <body class="Background"> <!--note this class is not yet used-->
+        
+        <!--Navbar-->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <a href="#Contact">Contact</a>
+            <div style="text-align: end;padding: 14px 16px;">
+                <span class="arrow">></span>
+                <span class="arrow">M</span>
+                <span class="arrow">i</span>
+                <span class="arrow">r</span>
+                <span class="arrow">w</span>
+                <span class="arrow">a</span>
+                <span class="arrow">i</span>
+                <span class="arrow">s</span>
+                <span class="dash">_</span>
+                </div>
+        </div>
+
+        <!--Breaks inserted to add space between navbar and the first heading-->
+        <br>
+        <br>
+
+        <!--Background video-->
+        <div id="Home">
+            <video autoplay muted loop id="Main_Video">
+                <source src="./Videos/bg_Matrix.mp4" type="video/mp4">
+                <!--Display message if video fails to run-->
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+
+        <!--Video text-->
+        <div class="Video_Text">
+            <p class="glow center">Mirwais Sarwary</p>
+            <strong>
+                <p class="center">
+                    <q>Science can amuse and fascinate us all, 
+                        but it is engineering that changes the world.
+                    </q>
+                    <br>- Isaac Asimov
+                    <br><br>
+                    <q>The ideal engineer is a composite… 
+                        <br>He is not a scientist, he is not a mathematician, he is not a sociologist or a writer, 
+                        <br>but he may use the knowledge and techniques of any or all of these disciplines 
+                        <br>in solving engineering problems.
+                    </q>
+                    <br> -N.W. Dougherty
+                    <br>
+                    <br>Welcome to my portfolio website. Let's make dreams come true!  
+                </p>
+            </strong>
+        </div>
+
+        <!--About section-->
+        <div class="Row" id="About">
+            <!--Left column-->
+            <div class="Column_2">
+                <img src="./images/bg_binary.png" alt="Replace with your own image and description">
+            </div>
+            <!--Right column-->
+            <div class="Column_1" style="overflow-y: scroll;">
+                <h1>About</h1>
+                <p>
+                    Thank you for visiting! I'm an experienced medical device engineer, dedicated to improving the quality of life
+                    through innovative products and services that benefit mankind. 
+                    <br>
+                    Below is a list of my credentials and a brief overview of my experiences:
+
+                    <ul>Degrees:
+                        <ul>
+                            <li>
+                                Master of Science   - Engineering/Biomedical Devices
+                            </li> 
+                            <li>
+                                Bachelor of Science - Biological & Mechanical Systems Engineering
+                            </li>
+                        </ul>
+                    </ul>
+                    <ul>Certification:
+                        <ul>
+                            <li>
+                                Board for Professional Engineers and Land Surveyors - EIT 119324
+                            </li> 
+                            <li>
+                                The Tech Academy - Software Developer
+                            </li>
+                        </ul>
+                    </ul>
+                    <br>
+                    My professional experience and education are founded upon a composite of disciplines encompassing:
+                    Mechanical Engineering, Electrical Engineering, Biology, Computer Sciences, and others. 
+                    <br><br>
+                    I enjoy working in a collaborative environment and bring a unique blend of creative thinking, analytical problem solving, 
+                    and effective project management experience.
+                    <br><br>
+                    My professional experience spans through all the phases of product development which includes: 
+                    design & prototyping, design control & documentation, quality system & risk management, verification & validation, 
+                    transfer to steady state manufacturing & project management.
+                    <br><br>
+                    As a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer program, 
+                    I'm trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C#, Python and more. 
+                    <br><br>
+                    I would love to work with you on your project. <a href="#Contact">Contact</a> me below!
+                </p>
+            </div>
+        </div>
+
+        <!--GitHub section-->
+        <div class="Row" id="GitHub">
+            <!--Left column-->
+            <div class="Column_1">
+                <h1>GitHub</h1>
+                <p>
+                    You can view my coding projects on my GitHub profile here:
+                    <br>
+                    <p class="center"><a href="https://github.com/MirSar" target="_blank">Mirwais Sarwary Github</a></p>
+                </p>
+            </div>
+            <!--Right column-->
+            <div class="Column_2">
+                <a href="https://github.com/MirSar" target="_blank"><img src="./images/gitHubLogo.png" alt="GitHub Logo"></a>
+            </div>
+        </div>
+
+        <!--Contact section-->
+        <div class="Row" id="Contact">
+            <!--Contact image, left column-->
+            <div class="Column_2 Column_contact Column_2b">
+                <img id="img1" src="./images/bridge-matrix.png" alt="Contact_Image">
+            </div>
+            <!--Contact form, right column-->
+            <div class="Column_1 Column_contact Column_1b">
+                <h1 class="white-text">Contact</h1>
+                <!--This specifies where and how to send the form data; we are leaving it blank-->
+                <form action="" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
+                    <label>Name:</label>
+                        <input type="text" placeholder="Please enter your name here">
+                    <label>Email:</label>
+                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                    <label>Message:</label>
+                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                        <input type="submit" value="SUBMIT">
+                </form>
+            </div>
+        </div>
+
+        <!--Footer section-->
+        <footer>
+            <p>
+                <p class="center">Engineer: Mechaical, Biomedical Device, Software Developer - <a href=" " target="_blank">Mirwais Sarwary</a></p>
+                <br>
+            </p>
+        </footer>
+    </body>
+</html>
