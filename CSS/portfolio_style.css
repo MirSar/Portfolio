@@ -35,7 +35,7 @@ h1 {
 /* Heading 1 Element: hover effect */
 h1:hover {
     filter: grayscale(5%); /*adds a slightly gray filter to the h1 when hovered over*/
-    transform: scale(1.1); /*increases the size*/
+    transform: scale(1.03); /*increases the size*/
     transition: transform 1s; /*1 sec transformation*/
 }
 
@@ -47,26 +47,24 @@ h1:hover {
 }
 
 /* Paragraph elements */
-p {
+p, ul {
     font-family: Perpetua, Rockwell Extra Bold;
-    text-align: justify; /* Justify text within paragraph elements */
+    text-align:left; /* align text within paragraph elements */
     letter-spacing: .1vw; /* This expands the text slightly */
     font-size: 2.5vw; /*relative font size, 2.5% if view width*/
     padding-left: 1vw; /* Adds padding to the left of the paragraph element */
     padding-right: 1vw; /* Adds padding to the right of the paragraph element */
 }
-Ul, li {
-    font-family: Perpetua, Rockwell Extra Bold;
-    text-align: left;
-    letter-spacing: .1vw; /* This expands the text slightly */
-    font-size: 2.5vw; /*relative font size, 2.5% if view width*/
-    padding-left: 1vw; /* Adds padding to the left of the paragraph element */
-    padding-right: 1vw; /* Adds padding to the right of the paragraph element */
+Ul {
+    text-align:left;
+    font-size: 1.9vw;
+    text-decoration: none;
+    
 }
 
 /* Paragraph element hover effect */
-p:hover, li:hover, ul:hover {
-    transition: transform 1s; 
+p:hover, ul:hover {
+    transition: transform .5s; 
 	transform: scale(1.01); 
 }
 
@@ -78,12 +76,12 @@ p:hover, li:hover, ul:hover {
 .center:hover {
     text-shadow: 0px 0px 40px #39FF14, 3px 3px 45px #27ff01;
     transition: transform 2s;
-    transform: scale(1.1);
+    transform: scale(1.03);
 }
 
 /* Anchor elements */
 a {
-    color: blue; /* This ensures all links are blue */
+    color: rgb(69, 116, 203); /* This ensures all links are blue */
     cursor: pointer;
     text-decoration: underline;
 }
@@ -95,7 +93,7 @@ q {
 
 /* Image elements */
 img {
-    filter: grayscale(75%); /* This rids our pictures of 75% of their color */
+    filter:brightness(70%); /* This rids our pictures of 75% of their color */
     border-radius: 8px; /* Gives all images slightly rounded corners */
     max-width: 100%; /* Ensures all images stay within the width of their container */
     max-height: 100%; /* Ensures all images stay within the height of all images */
@@ -105,7 +103,7 @@ img {
 
 /* Image element hover effects */
 img:hover {
-	filter: grayscale(5%);  /* Brings back most of the image's color when hovered over */
+	filter: brightness(100%);  /* Brings back most of the image's color when hovered over */
 }
 
 /* The @media rule is used in media queries to apply different styles for different media/types of devices */
@@ -120,7 +118,8 @@ img:hover {
 /* Styling for footer element */
 footer {
     padding: 2%; /* This gives the footer padding that is equal to 2% of the width of the element's area */
-    background-color: rgb(189, 254, 222);
+    background-color: rgba(3, 45, 3,.95);
+    color: white;
 }
 
 /*====================
@@ -306,7 +305,7 @@ End of Styling text options
 ****** SLIDESHOW STYLING ******
 ==================================*/
 #Slideshow_Background {
-    background: rgba(1, 251, 101, 0.35); /* This creates a slightly transparent white background that's palced over the video in the background */
+    background: rgba(0, 0, 0, 0.7); /* This creates a slightly transparent white background that's palced over the video in the background */
 }
 
 .mySlides {
@@ -341,10 +340,10 @@ End of Styling text options
     position: absolute; /* This makes the next and previous buttons positioned relative to the slideshow container */
     top: 50%; /*this moves the position to the middle of the Slideshow_Container*/
     width: auto;
-    padding: 2vw;
+    padding: 1vw;
     color: #39FF14;
     font-weight: bold;
-    font-size: 1.5vw;
+    font-size: 2vw;
     border-radius: 0 3px 3px 0; /*top and bottom corners rounded*/
     user-select: none;
     transition: 0.6s ease; /*for the hover transition*/
@@ -372,15 +371,20 @@ End of Styling text options
     font-family: perpetua, Rockwell Extra Bold;
     letter-spacing: .1vw; /*slight even spacing between letters*/
     font-size: 1.5vw;
-    background-color: rgba(4, 251, 66, 0.7);
     border-radius: 0px 0px 7px 7px; /*rounding bottom left and bottom right corners*/
+}
+
+.text:hover {
+    transform: scale(1.1);
+    color: white;
+    font-weight: bold;
 }
 
 /*Styling of the dots */
 .dot {
     cursor: pointer;
     height: 1vw; /*sized relative to view width*/
-    width: 1ww;
+    width: 1.3vw;
     margin: .25vw;
     background-color: white;
     border-radius: 50%;
@@ -389,7 +393,7 @@ End of Styling text options
     z-index: 1; /*to be displayed above the other elements*/
 }
 .active, .dot:hover {
-    background-color: #00004d; /*dot color when hovered or set to active*/
+    background-color: rgb(17, 204, 17); /*dot color when hovered or set to active*/
 }
 
 /*Fading animation for Slideshow*/
@@ -433,7 +437,7 @@ End of Styling text options
     width: 50%;
     padding: 1.6%;
     height: 450px;
-    background-color: rgb(0, 35, 5);
+    background-color: rgba(3, 45, 3,.9);
 }
 
 /* This inserts something after the content of selected elements (in this case the elements with class "Row") */
@@ -446,7 +450,6 @@ End of Styling text options
 /*================================
 ****** END OF TABLE STYLING ******
 ==================================*/
-
 
 /*================================
 ****** CONTACT FORM STYLING ******
@@ -462,6 +465,7 @@ End of Styling text options
     cursor: pointer;
     animation: movePopup 5s;
     -webkit-animation: movePopup 5s; /* Animation for 5 seconds for Safari 4.0-8.0 */
+    border-radius: 5px;
 }
 .Pop_Up_Button:hover {
     border-color: green;
@@ -528,16 +532,18 @@ button {
 
 /*hover effect for contact and submit buttons*/
 button:hover, .form-container .btn:hover {
-    color: green;
+    color: #27ff01;
     background-color: white;
-    border-color: green;
+    border-color: #27ff01;
+    font-weight: bold;
+    font-size: larger;27ff01
     transition-duration: 1s;
     -webkit-transition-duration: 1s;
 }
 
 /*Submit button*/
 .form-container .btn {
-    background-color: #27ff01;
+    background-color: #;
     color: #00004d;
     border-color: green;
     margin-bottom: 1vh;
@@ -553,12 +559,13 @@ button:hover, .form-container .btn:hover {
 /*hover effect*/
 .form-container .cancel:hover {
     color: #e60073;
+    font-weight: bold;
+    font-size: larger;
     background-color: white;
     border-color: red;
     transition-duration: 1s;
     -webkit-transition-duration: 1s;
 }
-
 /*================================
 **END OF CONTACT FORM STYLING **
 ==================================*/
