@@ -42,7 +42,6 @@ h1:hover {
 /*Styling for Portfolio Title Text*/
 .white-text {
     color: #fff;
-    padding-top: 10vh;
     text-shadow: 0px 0px 40px #39FF14, 3px 3px 45px #27ff01;
 }
 
@@ -118,7 +117,8 @@ img:hover {
 /* Styling for footer element */
 footer {
     padding: 2%; /* This gives the footer padding that is equal to 2% of the width of the element's area */
-    background-color: rgba(3, 45, 3,.95);
+    background-image: linear-gradient(to right,white,green,white, green, white);
+  /*  background-color: rgba(3, 45, 3,.95);*/
     color: white;
 }
 
@@ -132,7 +132,7 @@ Styling text options
 /*glow effect on text*/
 .glow {
     opacity: 1;
-    font-size: 50px;
+    font-size: 5em;
     color: #fff;
     font-variant-caps: small-caps;
     text-align: center;
@@ -160,13 +160,16 @@ Styling text options
 
 /*retro text*/
 .arrow {
-    font: italic bold 20px Georgia, serif;
+    font: italic bold Georgia, serif;
+    font-size: 2vw;
     color: white;
     text-shadow: 0px 0px 40px #39FF14, 3px 3px 45px #27ff01;
+    padding-bottom: 0;
 }
 
 .dash {
-    font: italic bold 27px Georgia, serif;
+    font: italic bold Georgia, serif;
+    font-size: 2vw;
     color: white;
     text-shadow: 0px 0px 40px #39FF14, 3px 3px 45px #27ff01;
     animation-name: blink;
@@ -198,7 +201,7 @@ End of Styling text options
 ==================================*/
 .Navbar {
     overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
-    background-color: rgb(3, 45, 3); 
+    background-image: linear-gradient(black,green,white, green, black);
     position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
     top: 0; /* This ensures no space is displayed above the navbar */
     width: 100%; /* This makes the navbar span the entire width of the page */
@@ -250,11 +253,13 @@ End of Styling text options
     font-weight: bold; /* This makes the text on the navbar bold when hovered over */
     cursor: pointer;
     transition: 0.5s ease-in; /* Creates a smooth transition for the hover trigger */
+    border-radius: 13px;
 }
 
 /* Navbar home button */
 .Navbar a.active { /* This targets the a element on the navbar with the "active" class */
-    background-color: darkgray;
+    background-image: linear-gradient(black,gray,white);
+    border-radius: 13px;
 }
 /*================================
 ****** END of NAVBAR STYLING ******
@@ -274,11 +279,11 @@ End of Styling text options
 }
 
 /* Screens that are 576px and smaller will not display the background video */
-@media screen and (max-width: 576px) {
+/*@media screen and (max-width: 576px) {
     #Main_Video {
         display: none;
     }
-}
+}*/
 
 /* Texts over the video */
 .Video_Text {
@@ -314,11 +319,13 @@ End of Styling text options
 
 /*Slideshow section and container */
 #Slideshow_Container {
-    width: 39.5vw;
+    width: 50vw;
     height: auto;
-    padding-top: 4%;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
     position: relative; /* This sets the container relative to its normal positioning */
     margin:auto; /* This will horizontally center the container on the page */
+    margin-bottom: .5vh;
 }
 
 /*Removing the anchor underline for the next and previous buttons*/
@@ -333,6 +340,16 @@ End of Styling text options
     box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, .75);
     width: 100%;
 }
+/*Images contained within the slideshow*/
+.Column_Images {
+    vertical-align: middle; /*centers images vertically within the Slideshow_Container*/
+    height: auto; /*height of the images are auto adjusted based on the content*/
+    box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, .75);
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 
 /*Next and previous buttons*/
 .Previous, .Next {
@@ -363,7 +380,6 @@ End of Styling text options
 /*Slidshow text*/
 .text {
     color: white;
-    padding: 1vw;
     position: absolute; /*this places text within the image*/
     bottom: 0; /*positioned at the bottom of the image*/
     width: 100%;
@@ -378,22 +394,26 @@ End of Styling text options
     transform: scale(1.1);
     color: white;
     font-weight: bold;
+    background-color: rgba(57, 255, 20,.5);
 }
 
 /*Styling of the dots */
 .dot {
     cursor: pointer;
-    height: 1vw; /*sized relative to view width*/
-    width: 1.3vw;
-    margin: .25vw;
+    height: 2vw; /*sized relative to view width*/
+    width: 2vw;
+    margin: .5vw;
     background-color: white;
     border-radius: 50%;
     display: inline-block; /*aligns the dots to sit next to each other*/
     transition: background-color 0.6s ease;
     z-index: 1; /*to be displayed above the other elements*/
+    padding-bottom: 3vh;
+    margin-bottom: 9vh;
 }
 .active, .dot:hover {
     background-color: rgb(17, 204, 17); /*dot color when hovered or set to active*/
+    transform: scale(1.3);
 }
 
 /*Fading animation for Slideshow*/
@@ -428,16 +448,19 @@ End of Styling text options
     float: left;
     width: 50%; /* This ensures the column takes up half of the page width */
     padding: 1.6%;
-    height: 450px; /* This sets the height of the column to 450px -  this may need to be adjusted depending on the text you enter */
-    background-color: #f2f2f2; /* Sets the background color of the columns with class Column_1 */
+    height: 350px; /* This sets the height of the column to 450px -  this may need to be adjusted depending on the text you enter */
+   /* background-color: ivory; /* Sets the background color of the columns with class Column_1 */
+   background-image: linear-gradient(to right, gray,white,gray);
 }
 
 .Column_2 {
     float: left;
     width: 50%;
     padding: 1.6%;
-    height: 450px;
-    background-color: rgba(3, 45, 3,.9);
+    height: 350px;
+    background-image: linear-gradient(to right,black,green, white, green, black);
+
+   /* background-color: rgba(3, 45, 3,.9);*/
 }
 
 /* This inserts something after the content of selected elements (in this case the elements with class "Row") */
@@ -498,6 +521,7 @@ End of Styling text options
     max-width: 50vw;
     padding: 1vw;
     background-color: white;
+    border-radius: 13px 13px 0 0;
 }
 
 /* input[type=text] targets all text input sections of the contact form */
@@ -509,7 +533,7 @@ End of Styling text options
     box-sizing: border-box; /* This creates a box with a border around the contact form input boxes */
     margin: .6vw 0 .6vw 0;
     resize: vertical; /* This allows the user to resize the text boxes vertically */
-    font-size: 1vw;
+    font-size: 2vw;
     font-family: Perpetua, Rockwell Extra Bold;
 }
 
@@ -539,11 +563,12 @@ button:hover, .form-container .btn:hover {
     font-size: larger;27ff01
     transition-duration: 1s;
     -webkit-transition-duration: 1s;
+    border-radius: 13px;
 }
 
 /*Submit button*/
 .form-container .btn {
-    background-color: #;
+    background-color: rgb(15, 214, 15);
     color: #00004d;
     border-color: green;
     margin-bottom: 1vh;
@@ -565,6 +590,7 @@ button:hover, .form-container .btn:hover {
     border-color: red;
     transition-duration: 1s;
     -webkit-transition-duration: 1s;
+    border-radius: 13px;
 }
 /*================================
 **END OF CONTACT FORM STYLING **
@@ -578,53 +604,74 @@ Media Query Section
     p {
         font-size: 3.75vw;
     }
+    .Column_Images{
+        margin-top: 15vh;
+    }
+
 }
 
 @media screen and (min-width: 528px) and (max-width: 660px) {
     p {
         font-size: 3.5vw;
     }
+    .Column_Images{
+        margin-top: 10vh;
+    }
+ 
+
 }
 
 @media screen and (min-width: 661px) and (max-width: 799px) {
     p {
-        font-size: 2.75vw;
+        font-size: 3vw;
     }
+    .Column_Images{
+        margin-top: 7vh;
+    }
+  
 }
 
 @media screen and (min-width: 800px) and (max-width: 924px) {
     p {
         font-size: 2.5vw;
     }
+    .Column_Images{
+        margin-top: 5vh;
+    }
+
 }
 
 @media screen and (min-width: 925px) and (max-width: 1050px) {
     p {
         font-size: 2.25vw;
     }
+    .Column_Images{
+        margin-top: 3vh;
+    }
+
 }
 
 @media screen and (min-width: 1051px) and (max-width: 1310px) {
     p {
-        font-size: 2vw;
+        font-size: 1.5vw;
     } 
 }
 
 @media screen and (min-width: 1311px) and (max-width: 1535px) {
     p {
-        font-size: 1.75vw;
+        font-size: 1.5vw;
     }
 }
 
 @media screen and (min-width: 1536px) and (max-width: 2269px) {
     p {
-        font-size: 1.5vw;
+        font-size: 1.15vw;
     }
 }
 
 @media screen and (min-width: 2270px) {
     p {
-        font-size: 1.35vw;
+        font-size: 1.15vw;
     }
 }
 
@@ -640,11 +687,11 @@ Media Query Section
 /* Media rules to enlarge the font of the white text for smaller screens */
 @media screen and (max-width: 1080px) {
     .quote{
-        font-size: 3.5vw;
+        font-size: 2.75vw;
     }
 
     .white-text {
-        font-size: 4.5vw;
+        font-size: 3vw;
     }
 }
 
