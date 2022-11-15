@@ -18,7 +18,7 @@
         
         <!--Navbar-->
         <div class="Navbar">
-            <a class="active" href="#Home">Home</a>
+            <a href="#Home">Home</a>
             <a href="#Slideshow">slideshow</a>
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
@@ -27,21 +27,21 @@
             
             <div style="text-align: end;padding: 14px 16px;">
                 <span class="arrow">></span>
-                <span class="arrow">M</span>
-                <span class="arrow">i</span>
-                <span class="arrow">r</span>
-                <span class="arrow">w</span>
-                <span class="arrow">a</span>
-                <span class="arrow">i</span>
-                <span class="arrow">s</span>
-                <span class="dash">_</span>
+                <span class="arrow"><strong>M</strong></span>
+                <span class="arrow"><strong>i</strong></span>
+                <span class="arrow"><strong>r</strong></span>
+                <span class="arrow"><strong>w</strong></span>
+                <span class="arrow"><strong>a</strong></span>
+                <span class="arrow"><strong>i</strong></span>
+                <span class="arrow"><strong>s</strong></span>
+                <span class="dash"><strong>_</strong></span>
             </div>
         </div>
 
         <!--Background video-->
         <div id="Home">
             <video autoplay muted loop id="Main_Video">
-                <source src="./Videos/bg_Matrix.mp4" type="video/mp4">
+                <source src="./Videos/Bkg_Matrix2.mp4" type="video/mp4">
                 <!--Display message if video fails to run-->
                 Your browser does not support HTML5 video.
             </video>
@@ -73,35 +73,60 @@
         <div id="Slideshow">
             <div id="Slideshow_Background">
                 <div id="Slideshow_Container">
-                    <!--Slide 1 of 6-->
+                    <!--Slide 1 of 11-->
                     <div class="mySlides fade">
-                        <img class="Slideshow_Images" src="./images/selfie_2.png" alt="Selfie">
+                        <img class="Slideshow_Images" src="./images/profilePic_1.png" alt="profile pic">
                         <div class="text"><a class="white-text contact" onclick="openForm()">Contact me here</a></div>
                     </div>
-                    <!--Slide 2 of 6-->
+                    <!--Slide 2 of 11-->
                     <div class="mySlides fade">
-                        <img class="Slideshow_Images" src="./images/ComputerAndTecLogo.png" alt="ComputerAndTecLogo">
-                        <div class="text">Text for this image</div>
+                        <img class="Slideshow_Images" src="./images/TTA_1.png" alt="Computer And Tec Logo">
+                        <div class="text">Firm foundation in technology fundamentals</div>
                     </div>
-                    <!--Slide 3 of 6-->
+                    <!--Slide 3 of 11-->
                     <div class="mySlides fade">
-                        <img class="Slideshow_Images" src="./images/HTMLandCSSCourselogo.png" alt="HTMLandCSSCourselogo">
-                        <div class="text">Text for this image</div>
+                        <img class="Slideshow_Images" src="./images/TTA_3.png" alt="Version Control">
+                        <div class="text">Git, GitHub, and Azure DevOps</div>
                     </div>
-                    <!--Slide 4 of 6-->
+                    <!--Slide 4 of 11-->
                     <div class="mySlides fade">
-                        <img class="Slideshow_Images" src="./images/JavaScriptCourselogo.png" alt="JavaScriptCourselogo">
-                        <div class="text">Text for this image</div>
+                        <img class="Slideshow_Images" src="./images/TTA_4.png" alt="HTML and CSS">
+                        <div class="text">Understanding web development</div>
                     </div>
-                    <!--Slide 5 of 6-->
+                    <!--Slide 5 of 11-->
                     <div class="mySlides fade">
-                        <img class="Slideshow_Images" src="./images/python_logo_transparent.png" alt="python_Courselogo">
-                        <div class="text">Text for this image</div>
+                        <img class="Slideshow_Images" src="./images/TTA_5.png" alt="JavaScript">
+                        <div class="text">Versatile popular programming language</div>
                     </div>
-                    <!--Slide 6 of 6-->
+                    <!--Slide 6 of 11-->
                     <div class="mySlides fade">
-                        <img class="Slideshow_Images" src="./images/Csharp_dotNet_Courselogo.png" alt="Csharp_dotNet_Courselogo">
-                        <div class="text">Text for this image</div>
+                        <img class="Slideshow_Images" src="./images/TTA_6.png" alt="Database and SQL">
+                        <div class="text">Database fundamentals and how to create databases</div>
+                    </div>
+                    <!--Slide 7 of 11-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./images/TTA_7.png" alt="Python">
+                        <div class="text">Powerful and robust — capable of a wide range of functions</div>
+                    </div>
+                    <!--Slide 8 of 11-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./images/TTA_8.png" alt="Project Management">
+                        <div class="text">Understanding how development projects are run</div>
+                    </div>
+                    <!--Slide 9 of 11-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./images/TTA_9.png" alt="Visual Studio">
+                        <div class="text">Integrated Development Environment from Microsoft</div>
+                    </div>
+                    <!--Slide 10 of 11-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./images/TTA_10.png" alt="C# dotNet">
+                        <div class="text">One of the most in-demand languages in the software development field</div>
+                    </div>
+                    <!--Slide 11 of 11-->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./images/TTA_11.png" alt="Live Project">
+                        <div class="text">2-week coding projects - real-world development experience</div>
                     </div>
                     <!--Previous and Next buttons-->
                     <a class="Previous" onclick="plusSlides(-1)">&#10094;P</a>
@@ -118,6 +143,11 @@
                     <span class="dot" onclick="currentSlide(4)"></span>
                     <span class="dot" onclick="currentSlide(5)"></span>
                     <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
+                    <span class="dot" onclick="currentSlide(8)"></span>
+                    <span class="dot" onclick="currentSlide(9)"></span>
+                    <span class="dot" onclick="currentSlide(10)"></span>
+                    <span class="dot" onclick="currentSlide(11)"></span>
                 </div>
             </div>
 
@@ -234,7 +264,7 @@
 
         <!--Footer section-->
         <footer>
-            <p class="center">Engineer: Software Developer, Biomedical Devices, Biological & Mechanical Systems - <br><a href="#About" target="_blank">Mirwais Sarwary</a></p>
+            <p class="center">Biomedical Devices Engineer and Software Developer  <br><a href="#About" target="_blank">Mirwais Sarwary</a></p>
         </footer>
     </body>
 </html>
